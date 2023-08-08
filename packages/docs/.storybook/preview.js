@@ -9,6 +9,9 @@ const preview = {
         date: /Date$/,
       },
     },
+    backgrounds:{
+      values: [{name: "darkMode", value:"#00000050"}]
+    }
   },
 };
 
