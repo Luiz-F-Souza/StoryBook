@@ -18,7 +18,7 @@ export const customTag: StoryObj<HeadingProps> = {
   args: {
     children: "H1 Heading",
     as: 'h1',
-    size: '6xl'
+    size: '4xl'
   },
   parameters:{
     docs:{
