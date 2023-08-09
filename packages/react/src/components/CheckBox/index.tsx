@@ -16,3 +16,5 @@ export const CheckBox: React.FC<CheckBoxProps> = (props) => {
     </CheckBoxContainer>
   )
 }
+
+CheckBox.displayName = "Checkbox"
