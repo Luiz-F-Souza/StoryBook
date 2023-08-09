@@ -29,7 +29,7 @@
     "name": "@lfsouza/ts-config",
     "version": "1.0.0",
     "license": "MIT",
-    "private: true
+    "private": true
   }
   ```
 
