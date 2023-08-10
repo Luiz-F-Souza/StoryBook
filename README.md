@@ -1,6 +1,6 @@
-# PASSO A PASSO
+# PASSO A PASSO BÁSICO
 
-### root
+## root
 
 - `npm init -y`
   - remover tudo e adicionar um
@@ -16,9 +16,9 @@
 - Após já ter instalado algumas dependências na página de tokens ou em outras, apagar suas respectivas `node_modules` e dar um npm i na pasta **root** em questão.
 - A pasta **root** manterá uma `node_modules` 'compartilhada' entre seus repos. Incluindo os repositórios locais.
 
-### root/packages
+## root/packages
 
-### root/packages/ts-config
+## root/packages/ts-config
 
 - `npm init -y`
   - Renomear o "name" denrto do `package.json` para o formato: `@nome-da-instituicao/ts-config`
@@ -72,7 +72,7 @@
     }
    ```
 
-### root/packages/tokens
+## root/packages/tokens
 
 - `npm init -y`
   - Renomear o "name" denrto do `package.json` para o formato: `@nome-da-instituicao/tokens`
@@ -99,7 +99,7 @@
 
   - Observe que devemos ter incluido o pacote referenciado no extends no `package.json` e deve-se substituir o `@lfsouza` pelo nome do seu projeto com as configurações do typescript
   
-### packages/tokens/src
+## packages/tokens/src
   
 - **colors.ts**
   - Vai armazenar todos os tokens de cores do design system
@@ -131,7 +131,7 @@
   - `export * from './colors.ts'`
   - Isso serve para faciliar as importações futuras
 
-### Em pacotes que necessitam do react
+## Em pacotes que necessitam do react
 
 - `npm i -D react @types/react @types/react-dom`
   - O react é instalado como uma dependência de desenvolvimento, já que ele já estará instalado no projeto de quem estiver utilizado o projeto.
@@ -147,7 +147,7 @@
 
 - No `tsconfig.json` utilizar o caminho `"extends": "@lfsouza/ts-config/react.json",` e o `"include": ["src"]`
 
-### root/packages/docs
+## root/packages/docs
 
 - Pasta onde deixremos nosso storyBook.
   - Por padrão o storyBook pede para que o criemos a partir de algum componente que já contenha uma biblioteca como react, por exemplo, assim ele já traz uma série de configurações. Mas nesse exemplo estamos o utilizando a parte de todo restante, dentro da pasta docs. isso para que, se precisarmos mudar algo dentro da bliblioteca em si seja muito mais fácil
@@ -168,4 +168,10 @@
           plugins: [react()]
         })
     ```
+
 - Apagar todas as pastas `node_modules` que existirem e rodar o `npm i`
+
+## Dependências gerais
+- TurboPack (para buildar para dev e production mais rápido)
+- ChangeSet (para auxiliar na manutenção dos repos)
+  - `npx changeset init` após a instalação
